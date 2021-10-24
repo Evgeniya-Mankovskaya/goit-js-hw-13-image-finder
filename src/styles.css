@@ -40,17 +40,21 @@ body {
   justify-content: center;
   margin: 50px auto;
 }
+.search-form__input {
+  padding: 10px 15px;
+  margin-right: 15px;
+}
+
+.search-form__btn {
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+}
 
 .btn {
   display: block;
   margin: 0 auto;
-}
-
-.photo-card img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: transform var(--duration) var(--timing-function);
+  background-color: #888788;
 }
 
 .is-hidden {
@@ -77,6 +81,7 @@ body {
   height: 300px;
   object-fit: cover;
   cursor: pointer;
+  transition: transform var(--duration) var(--timing-function);
 }
 
 .photo-card img:hover {
