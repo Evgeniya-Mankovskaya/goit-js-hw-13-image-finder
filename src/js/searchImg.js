@@ -34,16 +34,20 @@ function onSearch(e) {
 }
 
 function fetchCards() {
-  loadMoreBtn.disable();
-  return apiService.fetchImage().then(img => {
-    renderMarkup(img);
-    scrollPage();
-    loadMoreBtn.enable();
-    if (img.length === 0) {
-      loadMoreBtn.hide();
-      noMatches();
-    }
-  });
+  try {
+    loadMoreBtn.disable();
+    return apiService.fetchImage().then(img => {
+      renderMarkup(img);
+      scrollPage();
+      loadMoreBtn.enable();
+      if (img.length === 0) {
+        loadMoreBtn.hide();
+        noMatches();
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 function onLoadMore() {
